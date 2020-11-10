@@ -34,7 +34,7 @@ function compiler_SCSS(cb){
 }
 function copyImg(cb){
   return src ('dev/assets/images/**/*')
-  .pipe(dest('dist/img'))
+  .pipe(dest('dist/imagenes'))
   .pipe(refresh(lrserver));
   cb()
 }
