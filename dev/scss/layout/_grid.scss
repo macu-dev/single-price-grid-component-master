@@ -1,0 +1,18 @@
+.container{
+  width:$size-100;
+  height:$size-100;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 700px auto;
+  grid-template-areas:"header header header"
+                    "header header header"
+                    "footer footer footer";
+
+  .header_ping{
+    @include grid-row-column(header);
+  }
+
+  footer{
+    @include grid-row-column(footer);
+  }
+}

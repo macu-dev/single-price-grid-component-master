@@ -1,0 +1,82 @@
+@include mq ($large){
+  .container{
+    padding-right: 25px;
+    padding-left: 25px;
+    grid-template-rows: auto auto 50px;
+    grid-template-areas:"header header header"
+                      "header header header"
+                      "footer footer footer";
+  }
+
+
+  .box_title{
+
+    .title_ping{
+      font-size: 1.59rem;
+    }
+
+    .subtile_ping{
+      font-size: 0.98rem;
+    }
+  }
+
+  form {
+
+    width: $size-100;
+    flex-wrap: wrap;
+    .form-group-email, .form-group-submit{
+      width: $size-100;
+    }
+
+    .form-group-email {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+      #email{
+        width: $size-100;
+      }
+      
+    }
+
+    .form-group-submit {
+      #submit{
+        width: $size-100;
+      }
+    }
+
+  }
+
+  .box_img {
+    img{
+      width:  $size-100;
+    }
+  }
+
+  .container-icons + p, footer{
+    font-size: 0.8rem;
+  }
+
+
+  footer{
+    align-items: flex-end;
+  }
+
+  .container-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-icons-social {
+    a{
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid $color-pale-blue;
+    }
+  }
+
+ 
+}
+
+

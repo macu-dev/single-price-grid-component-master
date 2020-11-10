@@ -1,0 +1,58 @@
+@mixin grid-row-column($column-row){
+  grid-column:$column-row/$column-row;
+  grid-row:$column-row/$column-row;
+}
+
+@mixin font($font-fam, $size, $color){
+
+  @if($size == ''){
+    font: {
+      family: $font-fam;
+      size:initial;
+    }
+  }@else{
+    font: {
+      family: $font-fam;
+      size:$size;
+    }
+  }
+  
+  color:$color;
+}
+
+
+@mixin grid($column, $row){
+  display: grid;
+  grid-template-columns:$column;
+  grid-template-rows:$row;
+  @content;
+}
+
+
+@mixin configLink{
+  text-decoration: none;
+  @content;
+}
+
+@mixin btn ($bg-color, $border, $border-radius, $padding) {
+  background-color: $bg-color;
+  border: $border;
+  border-radius: $border-radius;
+  padding: $padding;
+  cursor: pointer;
+}
+
+@mixin mq ($breakpoint){
+  @media (max-width: $breakpoint){
+    @content;
+  }
+}
+
+@mixin customInput($width, $border-color, $border-size, $border-radius, $padding ) {
+  width: $width;
+  padding: $padding;
+  border-radius: $border-radius;
+  border: none;
+  border: $border-size solid $border-color;
+}
+
