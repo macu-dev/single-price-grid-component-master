@@ -1,11 +1,20 @@
-.header_ping{
+header{
   width: $size-100;
   height: $size-100;
-  padding-top:$size-2rem + $size-2rem;
   display: flex;
   flex-wrap:wrap;
   justify-content:center;
+  
+
+  h1 {
+    width: $size-100;
+    text-align: center;
+  }
 }
+
+
+
+
 
 .box_title{
   width:$size-100;

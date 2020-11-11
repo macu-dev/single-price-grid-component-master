@@ -21,13 +21,18 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 700px auto;
-  grid-template-areas: "header header header" "header header header" "footer footer footer";
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header header header" "main   main    main" "footer footer footer";
 }
 
-.container .header_ping {
+.container header {
   grid-column: header/header;
   grid-row: header/header;
+}
+
+.container main {
+  grid-column: main/main;
+  grid-row: main/main;
 }
 
 .container footer {
@@ -35,13 +40,17 @@ body {
   grid-row: footer/footer;
 }
 
-.header_ping {
+header {
   width: 100%;
   height: 100%;
-  padding-top: 4rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+header h1 {
+  width: 100%;
+  text-align: center;
 }
 
 .box_title {
@@ -98,6 +107,23 @@ body {
   text-align: center;
 }
 
+main {
+  display: inherit;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "suscription" "whyUs";
+}
+
+main .suscripcion {
+  grid-column: "suscription"/"suscription";
+  grid-row: "suscription"/"suscription";
+}
+
+main .whyUs {
+  grid-column: "whyUs"/"whyUs";
+  grid-row: "whyUs"/"whyUs";
+}
+
 .navbar_ping {
   width: 100%;
   display: flex;
@@ -111,113 +137,6 @@ body {
   justify-content: center;
 }
 
-form {
-  margin-top: 1rem;
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-}
-
-form .form-group-email {
-  width: 50%;
-  max-width: 100%;
-  flex-wrap: wrap;
-}
-
-form .form-group-email #email {
-  width: 100%;
-  padding: 17px 25px;
-  border-radius: 25px;
-  border: none;
-  border: 1px solid #969696;
-}
-
-form .form-group-email #email::placeholder {
-  color: #969696;
-  font-weight: 100;
-}
-
-form .form-group-email #email:focus {
-  outline: none;
-}
-
-form .form-group-submit {
-  display: inherit;
-  justify-content: center;
-  width: 30%;
-  height: 51px;
-}
-
-form .form-group-submit #submit {
-  width: 80%;
-  padding: 17px 20px;
-  border-radius: 25px;
-  border: none;
-  border: 1px solid transparent;
-  background-color: #4f7df3;
-  height: 100%;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  box-shadow: 0 7px 10px #c2d3ff;
-}
-
-form .form-group-submit #submit:hover {
-  cursor: pointer;
-  background-color: #c2d3ff;
-}
-
-form .form-group-submit #submit:focus {
-  outline: none;
-}
-
-.error {
-  border: 1px solid #ff5263 !important;
-}
-
-.message-error {
-  font-size: 0.8rem;
-  padding-left: 20px;
-  font-style: italic;
-  color: #ff5263;
-}
-
-.container-icons {
-  width: 100%;
-  padding-top: 3rem;
-}
-
-.container-icons .box-icons-social {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-.box-icons-social a {
-  display: inline-flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  text-decoration: none;
-  color: #4f7df3;
-  margin-right: 20px;
-}
-
-.box-icons-social a i {
-  width: 50%;
-  height: 50%;
-}
-
-.box-icons-social a:hover {
-  border-radius: 50%;
-  background-color: #4f7df3;
-  color: white;
-}
-
 footer {
   display: flex;
   justify-content: center;
@@ -226,57 +145,4 @@ footer {
 
 footer .attribution {
   color: #969696;
-}
-
-@media (max-width: 992px) {
-  .container {
-    padding-right: 25px;
-    padding-left: 25px;
-    grid-template-rows: auto auto 50px;
-    grid-template-areas: "header header header" "header header header" "footer footer footer";
-  }
-  .box_title .title_ping {
-    font-size: 1.59rem;
-  }
-  .box_title .subtile_ping {
-    font-size: 0.98rem;
-  }
-  form {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  form .form-group-email, form .form-group-submit {
-    width: 100%;
-  }
-  form .form-group-email {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-  form .form-group-email #email {
-    width: 100%;
-  }
-  form .form-group-submit #submit {
-    width: 100%;
-  }
-  .box_img img {
-    width: 100%;
-  }
-  .container-icons + p, footer {
-    font-size: 0.8rem;
-  }
-  footer {
-    align-items: flex-end;
-  }
-  .container-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .box-icons-social a {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid #c2d3ff;
-  }
 }

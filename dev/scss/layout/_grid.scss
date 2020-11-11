@@ -3,16 +3,22 @@
   height:$size-100;
   display:grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 700px auto;
+  grid-template-rows: repeat(3, auto);
   grid-template-areas:"header header header"
-                    "header header header"
+                    "main   main    main"
                     "footer footer footer";
 
-  .header_ping{
+  header{
     @include grid-row-column(header);
+  }
+
+  main{
+    @include grid-row-column(main);
   }
 
   footer{
     @include grid-row-column(footer);
   }
 }
+
+
