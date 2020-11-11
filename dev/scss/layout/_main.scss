@@ -1,0 +1,16 @@
+main{
+  display: inherit;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:"suscription" "whyUs";
+
+
+  .suscripcion{
+    @include grid-row-column('suscription');
+  }
+
+  .whyUs{
+    @include grid-row-column('whyUs');
+  }
+
+}
