@@ -3,18 +3,32 @@ header{
   height: $size-100;
   display: flex;
   flex-wrap:wrap;
-  justify-content:center;
+  align-content: center;
+  justify-content:start;
+  padding: 40px;
+  background-color: $color-white;
   
 
   h1 {
     width: $size-100;
-    text-align: center;
+    text-align: left;
+    font-size: 1.5rem;
+    color:$Cyan;
+    padding-bottom:24px;
   }
+
+  h2{
+    color:$Bright-Yellow;
+    font-size: 17px;
+    padding-bottom: 11px;
+  }
+
+  p{
+    color:$Grayish-Blue;
+    line-height: 1.6;
+  }
+
 }
-
-
-
-
 
 .box_title{
   width:$size-100;
