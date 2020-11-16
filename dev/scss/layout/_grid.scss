@@ -1,14 +1,13 @@
 .container{
   width:$size-100 - 50%;
-  height:$size-100;
   display:grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 213px 290px auto;
+  grid-template-rows: auto 250px auto;
   grid-template-areas:"header header header"
                     "main   main    main"
                     "footer footer  footer ";
   margin: 0 auto;
-  border-radius: 8px;
+  border-radius: 9px;
   box-shadow: 0 2px 8px 2px $box-shadow;
   
 

@@ -1,14 +1,19 @@
 main{
   display: inherit;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "suscripcion whyUs";
 
   .suscripcion{
     background-color: $Cyan;
+    padding: 40px;
+    @include grid-row-column(suscripcion);
   }
   
   .whyUs{
     background-color: $Cyan-light;
+    padding: 40px;
+    @include grid-row-column(whyUs);
   }
 
 }

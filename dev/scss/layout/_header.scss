@@ -11,14 +11,13 @@ header{
 
   h1 {
     width: $size-100;
-    text-align: left;
-    font-size: 1.5rem;
-    color:$Cyan;
+    @include font($font-karla-bold, 1.5rem, $Cyan);
     padding-bottom:24px;
   }
 
   h2{
     color:$Bright-Yellow;
+    width: $size-100;
     font-size: 17px;
     padding-bottom: 11px;
   }

@@ -12,13 +12,10 @@ html{
 body{
   min-width: $size-100;
   height:$size-100;
-  font-size: 20px;
-  font-family: 'Libre Franklin', sans-serif;
-}
-
-
-body{
   background-color:$Light-Gray;
-  font-family: $font-karla-regular;
+  font-family: $font-karla-regular , sans-serif;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

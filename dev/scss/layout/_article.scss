@@ -1,0 +1,10 @@
+.suscripcion {
+  h3{
+    font-size:17px;
+    color:$color-white;
+  }
+}
+
+.whyUs{
+  @extend .suscripcion;
+}
