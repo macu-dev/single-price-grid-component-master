@@ -85,7 +85,7 @@ main {
   grid-template-areas: "suscripcion whyUs";
 }
 
-main .suscripcion, main .whyUs {
+main .suscripcion {
   background-color: #2ab2af;
   padding: 40px;
   grid-column: suscripcion/suscripcion;
@@ -99,8 +99,8 @@ main .whyUs {
   grid-row: whyUs/whyUs;
 }
 
-.suscripcion h3, .whyUs h3 {
-  font-size: 17px;
+.suscripcion__title, .whyUs__title {
+  font-size: 1.25rem;
   color: white;
 }
 

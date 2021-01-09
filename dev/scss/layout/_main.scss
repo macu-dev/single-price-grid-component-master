@@ -9,7 +9,8 @@ main{
     padding: 40px;
     @include grid-row-column(suscripcion);
   }
-  
+
+
   .whyUs{
     background-color: $Cyan-light;
     padding: 40px;

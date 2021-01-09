@@ -1,0 +1,7 @@
+// px a rem
+@function rem($px, $base: 16px){
+  @if type-of($px) == number and unit($px) == 'px' {
+    @return $px / $base * 1rem ;
+  }
+  @return null;
+}
