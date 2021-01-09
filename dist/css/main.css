@@ -148,19 +148,6 @@ main .whyUs {
   margin-bottom: 5px;
 }
 
-.navbar_ping {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding-bottom: 2rem;
-}
-
-.navbar_ping .navbar_brand_ping {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 footer {
   display: flex;
   justify-content: center;
@@ -169,4 +156,31 @@ footer {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: "suscripcion suscripcion" "whyUs       whyUs     ";
+  }
+  header, main .suscripcion, main .whyUs {
+    padding: 25px;
+  }
+  header p {
+    font-size: 0.9375rem;
+  }
+  .container {
+    width: 90%;
+  }
+  .suscripcion__title, .whyUs__title {
+    margin-bottom: 15px;
+  }
+  .suscripcion__button {
+    margin-top: 20px;
+  }
+  footer {
+    width: 80%;
+    text-align: center;
+  }
 }

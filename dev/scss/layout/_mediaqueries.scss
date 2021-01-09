@@ -1,82 +1,37 @@
-@include mq ($large){
+@include mq ($medium){
+
+  main{
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: "suscripcion suscripcion"
+                          "whyUs       whyUs     " ;
+  }
+
+  header, main .suscripcion, main .whyUs  {
+    padding: 25px;
+  }
+
+  header p {
+    font-size: rem(15px);
+  }
+
   .container{
-    padding-right: 25px;
-    padding-left: 25px;
-    grid-template-rows: auto auto 50px;
-    grid-template-areas:"header header header"
-                      "header header header"
-                      "footer footer footer";
+    width: 90%;
   }
 
-
-  .box_title{
-
-    .title_ping{
-      font-size: 1.59rem;
-    }
-
-    .subtile_ping{
-      font-size: 0.98rem;
-    }
+  .suscripcion__title{
+    margin-bottom: 15px;
   }
 
-  form {
-
-    width: $size-100;
-    flex-wrap: wrap;
-    .form-group-email, .form-group-submit{
-      width: $size-100;
-    }
-
-    .form-group-email {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1rem;
-      #email{
-        width: $size-100;
-      }
-      
-    }
-
-    .form-group-submit {
-      #submit{
-        width: $size-100;
-      }
-    }
-
+  .suscripcion__button {
+    margin-top: 20px;
   }
 
-  .box_img {
-    img{
-      width:  $size-100;
-    }
+  footer {
+    width: 80%;
+    text-align: center;
   }
-
-  .container-icons + p, footer{
-    font-size: 0.8rem;
-  }
-
-
-  footer{
-    align-items: flex-end;
-  }
-
-  .container-icons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .box-icons-social {
-    a{
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 1px solid $color-pale-blue;
-    }
-  }
-
- 
+  
 }
 
 
