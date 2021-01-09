@@ -2,7 +2,7 @@
   width:$size-100 - 50%;
   display:grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 250px auto;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:"header header header"
                     "main   main    main"
                     "footer footer  footer ";

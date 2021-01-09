@@ -8,6 +8,8 @@ main{
     background-color: $Cyan;
     padding: 40px;
     @include grid-row-column(suscripcion);
+    display: flex;
+    flex-wrap: wrap;
   }
 
 

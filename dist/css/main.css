@@ -24,7 +24,7 @@ body {
   width: 50%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 250px auto;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas: "header header header" "main   main    main" "footer footer  footer ";
   margin: 0 auto;
   border-radius: 9px;
@@ -54,7 +54,7 @@ header {
   align-content: center;
   justify-content: start;
   padding: 40px;
-  background-color: white;
+  background-color: #fff;
 }
 
 header h1 {
@@ -90,6 +90,8 @@ main .suscripcion {
   padding: 40px;
   grid-column: suscripcion/suscripcion;
   grid-row: suscripcion/suscripcion;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 main .whyUs {
@@ -101,7 +103,49 @@ main .whyUs {
 
 .suscripcion__title, .whyUs__title {
   font-size: 1.25rem;
-  color: white;
+  color: #fff;
+}
+
+.suscripcion__text {
+  color: #36c9c7;
+  text-shadow: 1px 2px 1px #2ab2af;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.suscripcion__precio {
+  color: #fff;
+  font-size: 2.1875rem;
+  margin-right: 15px;
+}
+
+.suscripcion__paragraph {
+  color: #fff;
+}
+
+.suscripcion__button {
+  background-color: #c0df34;
+  border: none;
+  border-radius: 5px;
+  padding: 0.9375rem 1.875rem;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+  align-self: flex-end;
+  font-family: "Karla", sans-serif;
+  font-size: 1.0625rem;
+  color: #e5eff5;
+}
+
+.whyUs__list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.list__item {
+  color: #e5eff5;
+  margin-bottom: 5px;
 }
 
 .navbar_ping {
